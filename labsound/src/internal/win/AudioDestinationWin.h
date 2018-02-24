@@ -44,7 +44,7 @@ private:
     float m_sampleRate;
     bool m_isPlaying = false;
 
-    std::unique_ptr<RtAudio> dac; // XXX
+    RtAudio dac; // XXX
 };
 
 int outputCallback(void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames, double streamTime, RtAudioStreamStatus status, void *userData ); 
